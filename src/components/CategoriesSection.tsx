@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Package, Award, Home, TrendingUp } from 'lucide-react';
 
@@ -9,7 +10,7 @@ export const CategoriesSection: React.FC = () => {
           <div className="text-sm font-semibold text-gray-800 uppercase tracking-wider mb-4">
             WHAT WE DO
           </div>
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold" style={{ color: '#D2A136' }}>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold" style={{ color: '#06112a' }}>
             Why We stand Out!
           </h2>
         </div>
