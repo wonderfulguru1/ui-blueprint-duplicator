@@ -13,6 +13,7 @@ interface PropertyCardProps {
   };
   timeAgo: string;
   sqft: string;
+  showPrice?: boolean;
 }
 
 export const PropertyCard: React.FC<PropertyCardProps> = ({
@@ -24,7 +25,8 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
   type,
   agent,
   timeAgo,
-  sqft
+  sqft,
+  showPrice = true
 }) => {
   return (
     <article className="bg-[rgba(255,255,255,0.002)] shadow-[0px_5px_21px_-14px_rgba(0,0,0,0.14)] grow overflow-hidden font-semibold w-full max-md:mt-6">
@@ -34,28 +36,30 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
           className="absolute h-full w-full object-cover inset-0"
           alt={title}
         />
-        <div className="relative bg-black flex w-full gap-2 pl-[25px] pr-[61px] pt-[205px] pb-4 max-md:pt-[100px] max-md:px-5">
-          {monthlyPrice ? (
-            <>
-              <div className="rounded bg-[#5EA51D] relative text-base whitespace-nowrap leading-[29px] pl-[7px] pr-1.5">
-                <div className="z-0">{price}</div>
-                <div className="bg-[rgba(255,255,255,0.20)] absolute z-0 flex min-h-px w-[75px] translate-x-[0%] -translate-y-2/4 h-px top-2/4 inset-x-0" />
-              </div>
-              <div className="items-center rounded bg-[#5EA51D] flex px-[7px]">
-                <div className="text-base leading-[29px] self-stretch my-auto">
-                  {monthlyPrice}
+        {showPrice && (
+          <div className="relative bg-black flex w-full gap-2 pl-[25px] pr-[61px] pt-[205px] pb-4 max-md:pt-[100px] max-md:px-5">
+            {monthlyPrice ? (
+              <>
+                <div className="rounded bg-[#5EA51D] relative text-base whitespace-nowrap leading-[29px] pl-[7px] pr-1.5">
+                  <div className="z-0">{price}</div>
+                  <div className="bg-[rgba(255,255,255,0.20)] absolute z-0 flex min-h-px w-[75px] translate-x-[0%] -translate-y-2/4 h-px top-2/4 inset-x-0" />
                 </div>
-                <div className="text-sm leading-[25px] self-stretch my-auto">
-                  {" "}/ mo
+                <div className="items-center rounded bg-[#5EA51D] flex px-[7px]">
+                  <div className="text-base leading-[29px] self-stretch my-auto">
+                    {monthlyPrice}
+                  </div>
+                  <div className="text-sm leading-[25px] self-stretch my-auto">
+                    {" "}/ mo
+                  </div>
                 </div>
+              </>
+            ) : (
+              <div className="rounded bg-[#5EA51D] px-[7px] text-base whitespace-nowrap leading-[29px]">
+                {price}
               </div>
-            </>
-          ) : (
-            <div className="rounded bg-[#5EA51D] px-[7px] text-base whitespace-nowrap leading-[29px]">
-              {price}
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        )}
       </div>
       <div className="flex w-full flex-col bg-white p-[25px] max-md:px-5">
         <div className="self-stretch flex w-full items-stretch gap-5 text-sm text-black justify-between">

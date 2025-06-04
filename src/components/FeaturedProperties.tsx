@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PropertyCard } from './PropertyCard';
 
@@ -12,7 +11,8 @@ export const FeaturedProperties: React.FC = () => {
       type: 'Sale' as const,
       agent: { name: 'Genesia Properties', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
       timeAgo: '2 weeks ago',
-      sqft: '250sqm'
+      sqft: '250sqm',
+      showPrice: false
     },
     {
       image: '/lovable-uploads/0a327414-8a92-4ca1-874e-56e6e8a3a5fa.png',
@@ -22,7 +22,8 @@ export const FeaturedProperties: React.FC = () => {
       type: 'Sale' as const,
       agent: { name: 'Genesia Properties', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
       timeAgo: '2 weeks ago',
-      sqft: '250sqm'
+      sqft: '250sqm',
+      showPrice: false
     }
   ];
 
