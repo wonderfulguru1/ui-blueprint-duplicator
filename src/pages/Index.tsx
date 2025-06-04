@@ -5,8 +5,8 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutUsSection } from '@/components/AboutUsSection';
 import { CategoriesSection } from '@/components/CategoriesSection';
-import { LocationsSection } from '@/components/LocationsSection';
 import { FeaturedProperties } from '@/components/FeaturedProperties';
+import { LocationsSection } from '@/components/LocationsSection';
 import { VideoSection } from '@/components/VideoSection';
 import { AboutSection } from '@/components/AboutSection';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
@@ -27,8 +27,8 @@ const Index: React.FC = () => {
       <main>
         <AboutUsSection />
         <CategoriesSection />
-        <LocationsSection />
         <FeaturedProperties />
+        <LocationsSection />
         <VideoSection />
         <AboutSection />
         <CallToActionBanner />
