@@ -10,7 +10,7 @@ export const CategoriesSection: React.FC = () => {
           <div className="text-sm font-semibold text-[#5EA51D] uppercase tracking-wider mb-4">
             WHAT WE DO
           </div>
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold" style={{ color: '#D2A136' }}>
             Our Main Specialty
           </h2>
         </div>
