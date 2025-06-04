@@ -5,25 +5,24 @@ import { PropertyCard } from './PropertyCard';
 export const FeaturedProperties: React.FC = () => {
   const properties = [
     {
-      image: 'https://cdn.builder.io/api/v1/image/assets/TEMP/6ce969b4ab4daa227f4fc6aa9052423e23abb6db?placeholderIfAbsent=true',
-      price: '$300,000',
-      title: 'Sunny Loft Property',
-      location: 'New York',
+      image: '/lovable-uploads/a49a0d3b-e166-428d-84eb-27f2d39c89ac.png',
+      price: '₦6.25M',
+      title: "Anna's Court Dei-Dei",
+      location: 'By Sefacc Hotel and Suites Deidei',
       type: 'Sale' as const,
-      agent: { name: 'John Dorf', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
+      agent: { name: 'Genesia Properties', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
       timeAgo: '2 weeks ago',
-      sqft: '1,878 sqft'
+      sqft: '250sqm'
     },
     {
-      image: 'https://cdn.builder.io/api/v1/image/assets/TEMP/4d512ca7cc6f42ebc2e12dd2c6b501032b34c84a?placeholderIfAbsent=true',
-      price: '800,000',
-      monthlyPrice: '$3,050',
-      title: 'Sunny Loft Property',
-      location: 'New York',
-      type: 'Rent' as const,
-      agent: { name: 'John Dorf', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
+      image: '/lovable-uploads/0a327414-8a92-4ca1-874e-56e6e8a3a5fa.png',
+      price: '₦2.99M',
+      title: "Anna's Court Kuje",
+      location: 'Kuje Bridge after Military Checkpoint, Kuje, Abuja',
+      type: 'Sale' as const,
+      agent: { name: 'Genesia Properties', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
       timeAgo: '2 weeks ago',
-      sqft: '1,878 sqft'
+      sqft: '250sqm'
     }
   ];
 
