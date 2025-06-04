@@ -24,7 +24,7 @@ export const AboutUsSection: React.FC = () => {
             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               THIS IS INARGUABLY YOUR NEXT
               <br />
-              <span className="text-[#5EA51D]">BEST MOVE.</span>
+              <span className="text-[#D2A136]">BEST MOVE.</span>
             </h2>
             
             <div className="space-y-6 text-gray-600 leading-relaxed">
@@ -47,8 +47,8 @@ export const AboutUsSection: React.FC = () => {
             
             {/* Stats */}
             <div className="flex items-center gap-8 mt-8">
-              <div className="border-2 border-[#5EA51D] p-4 rounded">
-                <div className="text-4xl lg:text-5xl font-bold text-[#5EA51D]">3000+</div>
+              <div className="border-2 border-[#D2A136] p-4 rounded">
+                <div className="text-4xl lg:text-5xl font-bold text-[#D2A136]">3000+</div>
               </div>
               <div>
                 <div className="text-xl font-bold text-gray-900">HOMES</div>
@@ -57,7 +57,7 @@ export const AboutUsSection: React.FC = () => {
             </div>
             
             {/* Button */}
-            <button className="mt-8 bg-[#5EA51D] hover:bg-[#4a8617] text-white font-semibold px-8 py-3 rounded transition-colors">
+            <button className="mt-8 bg-[#D2A136] hover:bg-[#B8912E] text-white font-semibold px-8 py-3 rounded transition-colors">
               Find Out More
             </button>
           </div>

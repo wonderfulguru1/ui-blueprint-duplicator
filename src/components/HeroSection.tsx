@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
           mouth.
         </p>
         
-        <button className="inline-flex items-center gap-2 sm:gap-3 bg-[#5EA51D] hover:bg-[#4a8617] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase px-8 sm:px-10 lg:px-12 py-3 sm:py-4 transition-colors">
+        <button className="inline-flex items-center gap-2 sm:gap-3 bg-[#D2A136] hover:bg-[#B8912E] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase px-8 sm:px-10 lg:px-12 py-3 sm:py-4 transition-colors">
           LEARN MORE
           <svg width="8" height="12" viewBox="0 0 8 12" fill="none" className="flex-shrink-0">
             <path d="M1 1L7 6L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -37,7 +37,7 @@ export const HeroSection: React.FC = () => {
       {/* Slider indicators - hidden on mobile */}
       <div className="absolute right-4 sm:right-6 lg:right-8 top-1/2 transform -translate-y-1/2 hidden md:flex flex-col gap-4">
         <div className="w-6 lg:w-8 h-0.5 bg-white opacity-80"></div>
-        <div className="w-6 lg:w-8 h-0.5 bg-[#5EA51D]"></div>
+        <div className="w-6 lg:w-8 h-0.5 bg-[#D2A136]"></div>
         <div className="w-6 lg:w-8 h-0.5 bg-white opacity-80"></div>
       </div>
     </section>

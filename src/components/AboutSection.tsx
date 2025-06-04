@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface StatisticProps {
@@ -18,7 +19,7 @@ const Statistic: React.FC<StatisticProps> = ({ number, suffix, label }) => (
         </div>
       )}
     </div>
-    <div className="text-[#5ea51d] text-[13px] font-semibold leading-[15.6px]">
+    <div className="text-[#D2A136] text-[13px] font-semibold leading-[15.6px]">
       {label}
     </div>
   </div>
@@ -40,7 +41,7 @@ export const AboutSection: React.FC = () => {
         alt="About us"
       />
       <div className="max-w-[1344px] flex min-w-60 flex-col items-stretch grow shrink w-[816px] pt-1.5 px-6 max-md:max-w-full max-md:px-5">
-        <div className="text-[#5ea51d] text-[13px] font-bold leading-[23.4px]">
+        <div className="text-[#D2A136] text-[13px] font-bold leading-[23.4px]">
           About Us
         </div>
         <h2 className="text-black text-[50px] font-bold leading-[70px] max-md:max-w-full max-md:text-[40px] max-md:mr-2.5">
