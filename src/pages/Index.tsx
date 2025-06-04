@@ -3,7 +3,6 @@ import React from 'react';
 import { ContactBar } from '@/components/ContactBar';
 import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/HeroSection';
-import { AboutUsSection } from '@/components/AboutUsSection';
 import { CategoriesSection } from '@/components/CategoriesSection';
 import { FeaturedProperties } from '@/components/FeaturedProperties';
 import { LocationsSection } from '@/components/LocationsSection';
@@ -25,7 +24,6 @@ const Index: React.FC = () => {
         <Navigation />
       </div>
       <main>
-        <AboutUsSection />
         <CategoriesSection />
         <FeaturedProperties />
         <LocationsSection />
