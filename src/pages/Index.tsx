@@ -27,7 +27,6 @@ const Index: React.FC = () => {
         <VideoSection />
         <CallToActionBanner />
         <TestimonialsSection />
-        <PartnersSection />
       </main>
       <Footer />
     </div>
