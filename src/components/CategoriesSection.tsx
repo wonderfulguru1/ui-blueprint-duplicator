@@ -18,8 +18,8 @@ export const CategoriesSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Flexible Payment Plan */}
           <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-16 h-16 mx-auto mb-6 bg-[#5EA51D]/10 rounded-full flex items-center justify-center">
-              <Package className="w-8 h-8 text-[#5EA51D]" />
+            <div className="w-16 h-16 mx-auto mb-6 bg-[#D2A136]/10 rounded-full flex items-center justify-center">
+              <Package className="w-8 h-8" style={{ color: '#D2A136' }} />
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
               Flexible Payment Plan
@@ -33,8 +33,8 @@ export const CategoriesSection: React.FC = () => {
 
           {/* Quality Delivery */}
           <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-16 h-16 mx-auto mb-6 bg-[#5EA51D]/10 rounded-full flex items-center justify-center">
-              <Award className="w-8 h-8 text-[#5EA51D]" />
+            <div className="w-16 h-16 mx-auto mb-6 bg-[#D2A136]/10 rounded-full flex items-center justify-center">
+              <Award className="w-8 h-8" style={{ color: '#D2A136' }} />
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
               Quality Delivery
@@ -48,8 +48,8 @@ export const CategoriesSection: React.FC = () => {
 
           {/* Top-Notch Amenities */}
           <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-16 h-16 mx-auto mb-6 bg-[#5EA51D]/10 rounded-full flex items-center justify-center">
-              <Home className="w-8 h-8 text-[#5EA51D]" />
+            <div className="w-16 h-16 mx-auto mb-6 bg-[#D2A136]/10 rounded-full flex items-center justify-center">
+              <Home className="w-8 h-8" style={{ color: '#D2A136' }} />
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
               Top-Notch Amenities
@@ -63,8 +63,8 @@ export const CategoriesSection: React.FC = () => {
 
           {/* High ROI */}
           <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-16 h-16 mx-auto mb-6 bg-[#5EA51D]/10 rounded-full flex items-center justify-center">
-              <TrendingUp className="w-8 h-8 text-[#5EA51D]" />
+            <div className="w-16 h-16 mx-auto mb-6 bg-[#D2A136]/10 rounded-full flex items-center justify-center">
+              <TrendingUp className="w-8 h-8" style={{ color: '#D2A136' }} />
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
               High ROI
