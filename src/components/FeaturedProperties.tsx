@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { PropertyCard } from './PropertyCard';
 
@@ -37,6 +38,7 @@ export const FeaturedProperties: React.FC = () => {
           <h2 className="text-[#06112a] text-[50px] font-bold leading-[70px] max-md:max-w-full max-md:text-[40px]">
             Featured Properties
           </h2>
+          <div className="w-24 h-1 bg-yellow-500 mx-auto mt-6"></div>
         </header>
         <div className="mt-[72px] max-md:max-w-full max-md:mt-10">
           <div className="gap-5 flex justify-center max-md:flex-col max-md:items-stretch">
