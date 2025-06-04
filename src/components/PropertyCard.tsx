@@ -29,11 +29,11 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
   showPrice = true
 }) => {
   return (
-    <article className="bg-[rgba(255,255,255,0.002)] shadow-[0px_5px_21px_-14px_rgba(0,0,0,0.14)] grow overflow-hidden font-semibold w-full max-md:mt-6">
+    <article className="bg-[rgba(255,255,255,0.002)] shadow-[0px_10px_40px_-10px_rgba(0,0,0,0.25)] grow overflow-hidden font-semibold w-full rounded-2xl max-md:mt-6">
       <div className="flex flex-col relative aspect-[1.224] w-full text-white">
         <img
           src={image}
-          className="absolute h-full w-full object-cover inset-0"
+          className="absolute h-full w-full object-cover inset-0 rounded-t-2xl"
           alt={title}
         />
         {showPrice && (
@@ -61,7 +61,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
         )}
       </div>
-      <div className="flex w-full flex-col bg-white p-[25px] max-md:px-5">
+      <div className="flex w-full flex-col bg-white p-[25px] rounded-b-2xl max-md:px-5">
         <div className="self-stretch flex w-full items-stretch gap-5 text-sm text-black justify-between">
           <div className="flex items-stretch gap-2">
             <img
