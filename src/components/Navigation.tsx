@@ -1,40 +1,30 @@
+
 import React from 'react';
 
 export const Navigation: React.FC = () => {
   return (
-    <nav className="items-center absolute z-0 flex w-[1920px] text-white bg-[rgba(0,0,0,0.10)] px-[300px] right-0 top-[92px] max-md:max-w-full max-md:px-5">
-      <div className="max-w-[1320px] justify-center items-stretch self-stretch flex min-w-60 w-full gap-[40px_100px] flex-wrap flex-1 shrink basis-[0%] my-auto px-[13px] max-md:max-w-full">
-        <div className="leading-[1.1] gap-[-0.71px] py-[11px]">
-          <div className="text-[28px] font-black leading-[30.8px]">
-            Oakberry
-          </div>
-          <div className="text-[11px] font-bold leading-[12.1px]">
-            Real Estate Agency
-          </div>
+    <nav className="absolute top-0 left-0 right-0 z-20 bg-black bg-opacity-10 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        {/* Logo */}
+        <div className="text-white">
+          <div className="text-2xl font-black leading-tight">Oakberry</div>
+          <div className="text-xs font-bold uppercase tracking-wider">Real Estate Agency</div>
         </div>
-        <div className="flex text-[13px] font-bold whitespace-nowrap uppercase tracking-[2px] leading-[23px] justify-center flex-wrap">
-          <div className="text-[13px] font-bold leading-[23.4px] max-md:px-5">
-            Home
-          </div>
-          <div className="text-[13px] font-bold leading-[23.4px] max-md:px-5">
-            About
-          </div>
-          <div className="text-[13px] font-bold leading-[23.4px] max-md:px-5">
-            Properties
-          </div>
-          <div className="text-[13px] font-bold leading-[23.4px] max-md:px-5">
-            Agents
-          </div>
-          <div className="text-[13px] font-bold leading-[23.4px] max-md:px-5">
-            Blog
-          </div>
-          <div className="text-[13px] font-bold leading-[23.4px] max-md:px-5">
-            Contact
-          </div>
+        
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center space-x-12 text-white">
+          <a href="#" className="text-sm font-bold uppercase tracking-wider hover:text-[#5EA51D] transition-colors">Home</a>
+          <a href="#" className="text-sm font-bold uppercase tracking-wider hover:text-[#5EA51D] transition-colors">About</a>
+          <a href="#" className="text-sm font-bold uppercase tracking-wider hover:text-[#5EA51D] transition-colors">Properties</a>
+          <a href="#" className="text-sm font-bold uppercase tracking-wider hover:text-[#5EA51D] transition-colors">Agents</a>
+          <a href="#" className="text-sm font-bold uppercase tracking-wider hover:text-[#5EA51D] transition-colors">Blog</a>
+          <a href="#" className="text-sm font-bold uppercase tracking-wider hover:text-[#5EA51D] transition-colors">Contact</a>
         </div>
-        <div className="text-xs font-semibold leading-[18px]">
+        
+        {/* Submit Property Button */}
+        <button className="hidden md:block bg-[#5EA51D] text-white text-sm font-semibold uppercase tracking-wider px-6 py-3 hover:bg-[#4a8617] transition-colors">
           Submit A Property
-        </div>
+        </button>
       </div>
     </nav>
   );
