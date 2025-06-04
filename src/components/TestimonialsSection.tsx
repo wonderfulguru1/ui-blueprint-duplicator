@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { TestimonialCard } from './TestimonialCard';
 
@@ -50,7 +51,7 @@ export const TestimonialsSection: React.FC = () => {
           <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
             Genuine Experiences from Happy Clients and Trusted Partners
           </p>
-          <div className="w-24 h-1 bg-green-500 mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-yellow-500 mx-auto mt-6"></div>
         </div>
 
         {/* Testimonials Grid */}
