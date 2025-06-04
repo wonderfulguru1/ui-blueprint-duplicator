@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { TestimonialCard } from './TestimonialCard';
 
@@ -51,11 +50,7 @@ export const TestimonialsSection: React.FC = () => {
           <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
             Genuine Experiences from Happy Clients and Trusted Partners
           </p>
-          <div className="relative w-32 h-1 mx-auto mt-6">
-            <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded-full shadow-lg"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded-full animate-pulse opacity-75"></div>
-            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full shadow-md"></div>
-          </div>
+          <div className="w-24 h-1 bg-green-500 mx-auto mt-6"></div>
         </div>
 
         {/* Testimonials Grid */}
