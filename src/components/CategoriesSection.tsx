@@ -4,7 +4,7 @@ import { Search, Home, Building } from 'lucide-react';
 
 export const CategoriesSection: React.FC = () => {
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
+    <section className="py-16 lg:py-24" style={{ backgroundColor: '#EAF7F4' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="text-sm font-semibold text-[#5EA51D] uppercase tracking-wider mb-4">
