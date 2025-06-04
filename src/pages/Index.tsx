@@ -10,7 +10,6 @@ import { LocationsSection } from '@/components/LocationsSection';
 import { VideoSection } from '@/components/VideoSection';
 import { CallToActionBanner } from '@/components/CallToActionBanner';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
-import { BlogSection } from '@/components/BlogSection';
 import { PartnersSection } from '@/components/PartnersSection';
 import { Footer } from '@/components/Footer';
 
@@ -30,7 +29,6 @@ const Index: React.FC = () => {
         <VideoSection />
         <CallToActionBanner />
         <TestimonialsSection />
-        <BlogSection />
         <PartnersSection />
       </main>
       <Footer />
