@@ -11,7 +11,7 @@ export const CategoriesSection: React.FC = () => {
             WHAT WE DO
           </div>
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold" style={{ color: '#D2A136' }}>
-            Our Main Specialty why we standout
+            Why We stand Out!
           </h2>
         </div>
 
