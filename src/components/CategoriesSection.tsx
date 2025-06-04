@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Search, Home, Building } from 'lucide-react';
+import { Package, Award, House, TrendingUp } from 'lucide-react';
 
 export const CategoriesSection: React.FC = () => {
   return (
@@ -16,54 +16,48 @@ export const CategoriesSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {/* Buy a New Home */}
+          {/* Flexible Payment Plan */}
           <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="w-16 h-16 mx-auto mb-6 bg-[#5EA51D]/10 rounded-full flex items-center justify-center">
-              <Search className="w-8 h-8 text-[#5EA51D]" />
+              <Package className="w-8 h-8 text-[#5EA51D]" />
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
-              Buy a New Home
+              Flexible Payment Plan
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              when an unknown printer took galley
+              Pay for your home in the most
               <br />
-              and scrambled itmakepe spear
-              <br />
-              survived not five centuries
+              convenient way possible.
             </p>
           </div>
 
-          {/* Sell a Home */}
+          {/* Quality Delivery */}
           <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="w-16 h-16 mx-auto mb-6 bg-[#5EA51D]/10 rounded-full flex items-center justify-center">
-              <Home className="w-8 h-8 text-[#5EA51D]" />
+              <Award className="w-8 h-8 text-[#5EA51D]" />
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
-              Sell a Home
+              Quality Delivery
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              when an unknown printer took galley
+              You receive the exact quality
               <br />
-              and scrambled itmakepe spear
-              <br />
-              survived not five centuries
+              of home you paid for
             </p>
           </div>
 
-          {/* Rent a Home */}
+          {/* Top-Notch Amenities */}
           <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="w-16 h-16 mx-auto mb-6 bg-[#5EA51D]/10 rounded-full flex items-center justify-center">
-              <Building className="w-8 h-8 text-[#5EA51D]" />
+              <House className="w-8 h-8 text-[#5EA51D]" />
             </div>
             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
-              Rent a Home
+              Top-Notch Amenities
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              when an unknown printer took galley
+              Access to amenities that make for
               <br />
-              and scrambled itmakepe spear
-              <br />
-              survived not five centuries
+              a comfortable living experience
             </p>
           </div>
         </div>
