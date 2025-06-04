@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 export const ContactBar: React.FC = () => {
@@ -13,7 +14,7 @@ export const ContactBar: React.FC = () => {
         </div>
         <div className="flex flex-col items-stretch leading-[1.8] my-auto">
           <div className="flex items-stretch gap-1 text-[13px] font-semibold">
-            <div className="text-[#5ea51d] text-[13px] font-semibold leading-[23.4px]">
+            <div className="text-[#D2A136] text-[13px] font-semibold leading-[23.4px]">
               Free Call
             </div>
             <div className="text-white text-[13px] font-semibold leading-[23.4px]">
@@ -52,8 +53,8 @@ export const ContactBar: React.FC = () => {
         </div>
         <div className="flex items-stretch gap-[7px]">
           <div className="flex flex-col items-stretch">
-            <div className="text-[#5ea51d] text-[13px] font-semibold leading-[23.4px]">
-              <span style={{color: 'rgba(94,165,29,1)'}}>Connect </span>
+            <div className="text-[#D2A136] text-[13px] font-semibold leading-[23.4px]">
+              <span style={{color: '#D2A136'}}>Connect </span>
               <span style={{color: 'rgba(255,255,255,1)'}}>with us</span>
             </div>
             <div className="flex items-stretch gap-1.5 text-[10px] text-[#999999] font-medium whitespace-nowrap uppercase tracking-[1px] leading-[18px] mt-2.5">
