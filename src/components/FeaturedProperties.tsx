@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { PropertyCard } from './PropertyCard';
 
@@ -31,7 +32,7 @@ export const FeaturedProperties: React.FC = () => {
     <section className="items-center z-0 flex w-full flex-col justify-center bg-[#F7F7F7] py-28 max-md:max-w-full max-md:py-[100px]">
       <div className="max-w-[1320px] flex w-[1320px] flex-col items-stretch pb-[60px] px-3">
         <header className="max-w-[1320px] items-center self-center z-10 flex min-h-[99px] w-[880px] flex-col font-bold text-center gap-[5.39px] px-3">
-          <div className="text-[#5ea51d] text-[13px] font-bold leading-[23.4px]">
+          <div className="text-black text-[13px] font-bold leading-[23.4px]">
             Our Properties
           </div>
           <h2 className="text-black text-[50px] font-bold leading-[70px] max-md:max-w-full max-md:text-[40px]">
