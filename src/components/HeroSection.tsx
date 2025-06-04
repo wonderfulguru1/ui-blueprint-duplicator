@@ -34,16 +34,6 @@ export const HeroSection: React.FC = () => {
         </button>
       </div>
 
-      {/* Property type buttons at bottom */}
-      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row gap-2 sm:gap-4 px-4">
-        <button className="bg-white text-gray-700 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 font-medium text-sm sm:text-base hover:bg-gray-50 transition-colors whitespace-nowrap">
-          Buy Properties
-        </button>
-        <button className="bg-[#5EA51D] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 font-medium text-sm sm:text-base hover:bg-[#4a8617] transition-colors whitespace-nowrap">
-          Rent Properties
-        </button>
-      </div>
-
       {/* Slider indicators - hidden on mobile */}
       <div className="absolute right-4 sm:right-6 lg:right-8 top-1/2 transform -translate-y-1/2 hidden md:flex flex-col gap-4">
         <div className="w-6 lg:w-8 h-0.5 bg-white opacity-80"></div>
