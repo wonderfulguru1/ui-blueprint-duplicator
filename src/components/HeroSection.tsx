@@ -5,7 +5,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center">
       <img
-        src="/lovable-uploads/a02f07fb-c4b5-4126-91b8-6d518f916a6d.png"
+        src="https://preview.colorlib.com/theme/oakberry/images/bg_1.jpg.webp"
         className="absolute inset-0 w-full h-full object-cover"
         alt="Modern house interior"
       />
