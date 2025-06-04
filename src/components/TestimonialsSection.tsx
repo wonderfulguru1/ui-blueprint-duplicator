@@ -46,7 +46,7 @@ export const TestimonialsSection: React.FC = () => {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
-            Clients We Help
+            Happy Customers
           </h2>
           <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
             Genuine Experiences from Happy Clients and Trusted Partners
