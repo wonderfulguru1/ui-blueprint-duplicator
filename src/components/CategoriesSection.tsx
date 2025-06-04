@@ -13,6 +13,7 @@ export const CategoriesSection: React.FC = () => {
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold" style={{ color: '#06112a' }}>
             Why We stand Out!
           </h2>
+          <div className="w-24 h-1 bg-yellow-500 mx-auto mt-6"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
