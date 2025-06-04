@@ -7,7 +7,7 @@ export const CategoriesSection: React.FC = () => {
     <section className="py-16 lg:py-24" style={{ backgroundColor: '#06112a' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="text-sm font-semibold text-[#5EA51D] uppercase tracking-wider mb-4">
+          <div className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
             WHAT WE DO
           </div>
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold" style={{ color: '#D2A136' }}>
