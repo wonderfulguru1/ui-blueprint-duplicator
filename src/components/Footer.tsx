@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface FooterLinkProps {
@@ -41,126 +42,136 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="z-0 flex w-full flex-col items-center bg-[#06112A] pt-28 max-md:max-w-full max-md:pt-[100px]">
-      <div className="flex w-[1160px] max-w-full gap-[40px_100px] text-white">
-        <div className="self-stretch min-h-[53px] leading-[1.1] gap-[-0.71px] py-[5px]">
-          <div className="text-[28px] font-black leading-[30.8px]">
-            Oakberry
+    <footer className="z-0 flex w-full flex-col items-center bg-[#06112A] pt-16 md:pt-20 lg:pt-28 max-md:max-w-full">
+      {/* Main Footer Content */}
+      <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Footer Headers */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 text-white mb-8">
+          {/* Brand Section */}
+          <div className="lg:col-span-1">
+            <div className="text-2xl md:text-[28px] font-black leading-tight mb-1">
+              Oakberry
+            </div>
+            <div className="text-[11px] font-bold leading-tight">
+              Real Estate Agency
+            </div>
           </div>
-          <div className="text-[11px] font-bold leading-[12.1px]">
-            Real Estate Agency
+          
+          {/* Section Headers */}
+          <div className="text-xl font-bold leading-[30px]">
+            Offers
+          </div>
+          <div className="text-xl font-bold leading-[30px]">
+            Company
+          </div>
+          <div className="text-xl font-bold leading-[30px]">
+            Quick Links
+          </div>
+          <div className="text-xl font-bold leading-[30px]">
+            Have a Questions?
           </div>
         </div>
-        <div className="text-xl font-bold leading-[30px]">
-          Offers
-        </div>
-        <div className="text-xl font-bold leading-[30px]">
-          Company
-        </div>
-        <div className="text-xl font-bold leading-[30px]">
-          Quick Links
-        </div>
-        <div className="text-xl font-bold leading-[30px]">
-          Have a Questions?
+
+        {/* Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          {/* Brand Description */}
+          <div className="lg:col-span-1">
+            <p className="text-white text-base font-normal leading-[28.8px] mb-6">
+              A small river named Duden flows by their place and supplies it with the necessary regelialia.
+            </p>
+            <div className="flex gap-[14.1px]">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2379dfe5ffb0fa24144358d1379a0c64958d91b?placeholderIfAbsent=true"
+                className="aspect-[1] object-contain w-10 shrink-0 rounded-[20px]"
+                alt="Social media"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ae72363ce03894ff6d41d6b9d42b53e95ce5514?placeholderIfAbsent=true"
+                className="aspect-[1] object-contain w-10 shrink-0 rounded-[20px]"
+                alt="Social media"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1b7d04c1ab63877289d41603dc53916227478dd?placeholderIfAbsent=true"
+                className="aspect-[1] object-contain w-10 shrink-0 rounded-[20px]"
+                alt="Social media"
+              />
+            </div>
+          </div>
+
+          {/* Offers Links */}
+          <div className="flex flex-col text-base text-white font-normal leading-[29px] space-y-4">
+            {offerLinks.map((link, index) => (
+              <FooterLink key={index} icon={link.icon} text={link.text} />
+            ))}
+          </div>
+
+          {/* Company Links */}
+          <div className="flex flex-col text-base text-white font-normal leading-[29px] space-y-4">
+            {companyLinks.map((link, index) => (
+              <FooterLink key={index} icon={link.icon} text={link.text} />
+            ))}
+          </div>
+
+          {/* Quick Links */}
+          <div className="flex flex-col text-base text-white font-normal leading-[29px] space-y-4">
+            {quickLinks.map((link, index) => (
+              <FooterLink key={index} icon={link.icon} text={link.text} />
+            ))}
+          </div>
+
+          {/* Contact Information */}
+          <div className="flex flex-col text-white space-y-4">
+            {/* Address */}
+            <div className="flex items-start gap-4">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/3dc21d9cd1ee38c127e1bd70f536e56014be6a73?placeholderIfAbsent=true"
+                className="aspect-[1] object-contain w-[15px] shrink-0 mt-1"
+                alt="Address"
+              />
+              <div className="text-[15px] font-normal leading-[22.5px]">
+                203 Fake St. Mountain View, San Francisco, California, USA
+              </div>
+            </div>
+            
+            {/* Phone */}
+            <div className="flex items-start gap-4">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2b57c9e244232c2b1a2ba1d685e3a50f5d4ea4c?placeholderIfAbsent=true"
+                className="aspect-[0.8] object-contain w-3 shrink-0 mt-1"
+                alt="Phone"
+              />
+              <div className="text-sm font-normal leading-[21px]">
+                +2 392 3929 210
+              </div>
+            </div>
+            
+            {/* Email */}
+            <div className="flex items-start gap-4">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac5437829697af71a40327f5aa5b28e5d8a0c370?placeholderIfAbsent=true"
+                className="aspect-[1] object-contain w-[15px] shrink-0 mt-1"
+                alt="Email"
+              />
+              <div className="text-sm font-normal leading-[21px]">
+                info@yourdomain.com
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="flex w-[1296px] max-w-full gap-5 flex-wrap justify-between mt-[17px]">
-        <div className="flex flex-col items-stretch mt-[31px]">
-          <p className="text-white text-base font-normal leading-[28.8px]">
-            A small river named Duden flows by their
-            <br />
-            place and supplies it with the necessary
-            <br />
-            regelialia.
-          </p>
-          <div className="flex gap-[14.1px] mt-[22px] pb-5">
+
+      {/* Copyright Section */}
+      <div className="w-full bg-[#050D21] mt-16 lg:mt-[120px] py-8 lg:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center text-center text-white text-[13px] font-normal leading-[23.4px] space-y-2 sm:space-y-0 sm:space-x-1">
+            <span>Copyright ©2025 All rights reserved | This template is made with</span>
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2379dfe5ffb0fa24144358d1379a0c64958d91b?placeholderIfAbsent=true"
-              className="aspect-[1] object-contain w-10 shrink-0 rounded-[20px]"
-              alt="Social media"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/709dd008b45a6ca58edd5b1a2ff15115d4105f3e?placeholderIfAbsent=true"
+              className="aspect-[1] object-contain w-[13px] mx-1"
+              alt="Heart"
             />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ae72363ce03894ff6d41d6b9d42b53e95ce5514?placeholderIfAbsent=true"
-              className="aspect-[1] object-contain w-10 shrink-0 rounded-[20px]"
-              alt="Social media"
-            />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1b7d04c1ab63877289d41603dc53916227478dd?placeholderIfAbsent=true"
-              className="aspect-[1] object-contain w-10 shrink-0 rounded-[20px]"
-              alt="Social media"
-            />
+            <span>by Colorlib</span>
           </div>
-        </div>
-        <div className="flex flex-col text-base text-white font-normal leading-[29px] gap-[16.8px] pt-[3px] pb-1">
-          {offerLinks.map((link, index) => (
-            <div key={index} className={index > 0 ? 'mt-[17px]' : ''}>
-              <FooterLink icon={link.icon} text={link.text} />
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-col text-base text-white font-normal leading-[29px] gap-[16.8px] pt-[3px] pb-1">
-          {companyLinks.map((link, index) => (
-            <div key={index} className={index > 0 ? 'mt-[17px]' : ''}>
-              <FooterLink icon={link.icon} text={link.text} />
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-col text-base text-white font-normal leading-[29px] gap-[16.8px] pt-[3px] pb-1">
-          {quickLinks.map((link, index) => (
-            <div key={index} className={index > 0 ? 'mt-[17px]' : ''}>
-              <FooterLink icon={link.icon} text={link.text} />
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-col text-sm text-white font-normal w-[306px] max-w-full gap-[15px] pb-[15px]">
-          <div className="self-stretch flex w-full items-stretch gap-[25px] text-[15px] leading-[23px] py-1">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3dc21d9cd1ee38c127e1bd70f536e56014be6a73?placeholderIfAbsent=true"
-              className="aspect-[1] object-contain w-[15px] shrink-0"
-              alt="Address"
-            />
-            <div className="text-[15px] font-normal leading-[22.5px]">
-              203 Fake St. Mountain View, San
-              <br />
-              Francisco, California, USA
-            </div>
-          </div>
-          <div className="flex w-[152px] max-w-full items-start gap-7 mt-[15px] py-[3px]">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2b57c9e244232c2b1a2ba1d685e3a50f5d4ea4c?placeholderIfAbsent=true"
-              className="aspect-[0.8] object-contain w-3 shrink-0"
-              alt="Phone"
-            />
-            <div className="text-sm font-normal leading-[21px]">
-              +2 392 3929 210
-            </div>
-          </div>
-          <div className="flex w-[180px] max-w-full gap-[25px] whitespace-nowrap mt-[15px] pt-0.5 pb-[19px]">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac5437829697af71a40327f5aa5b28e5d8a0c370?placeholderIfAbsent=true"
-              className="aspect-[1] object-contain w-[15px] shrink-0"
-              alt="Email"
-            />
-            <div className="text-sm font-normal leading-[21px]">
-              info@yourdomain.com
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="items-center self-stretch flex text-[13px] text-white font-normal text-center leading-[23px] flex-wrap bg-[#050D21] mt-[120px] pt-[47px] pb-12 px-[728px] max-md:max-w-full max-md:mt-10 max-md:px-5">
-        <div className="text-[13px] font-normal leading-[23.4px]">
-          Copyright ©2025 All rights reserved | This template is made with 
-        </div>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/709dd008b45a6ca58edd5b1a2ff15115d4105f3e?placeholderIfAbsent=true"
-          className="aspect-[1] object-contain w-[13px] self-stretch shrink-0 my-auto"
-          alt="Heart"
-        />
-        <div className="text-[13px] font-normal leading-[23.4px]">
-          {" "}by 
-        </div>
-        <div className="text-[13px] font-normal leading-[23.4px]">
-          Colorlib
         </div>
       </div>
     </footer>
