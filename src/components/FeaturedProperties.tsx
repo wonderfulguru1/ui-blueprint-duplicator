@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { PropertyCard } from './PropertyCard';
 
@@ -23,27 +24,6 @@ export const FeaturedProperties: React.FC = () => {
       agent: { name: 'John Dorf', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
       timeAgo: '2 weeks ago',
       sqft: '1,878 sqft'
-    },
-    {
-      image: 'https://cdn.builder.io/api/v1/image/assets/TEMP/53e85a7dc49f3777f3befc7dc72dd6efd7cfd5eb?placeholderIfAbsent=true',
-      price: '$300',
-      title: 'Sunny Loft Property',
-      location: 'New York',
-      type: 'Sale' as const,
-      agent: { name: 'John Dorf', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
-      timeAgo: '2 weeks ago',
-      sqft: '1,878 sqft'
-    },
-    {
-      image: 'https://cdn.builder.io/api/v1/image/assets/TEMP/0ae13c3547d3aaa5d56ae8fe19ae5ccbaaf6e711?placeholderIfAbsent=true',
-      price: '$300',
-      monthlyPrice: '/ mo',
-      title: 'Sunny Loft Property',
-      location: 'New York',
-      type: 'Rent' as const,
-      agent: { name: 'John Dorf', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
-      timeAgo: '2 weeks ago',
-      sqft: '1,878 sqft'
     }
   ];
 
@@ -59,9 +39,9 @@ export const FeaturedProperties: React.FC = () => {
           </h2>
         </header>
         <div className="mt-[72px] max-md:max-w-full max-md:mt-10">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+          <div className="gap-5 flex justify-center max-md:flex-col max-md:items-stretch">
             {properties.map((property, index) => (
-              <div key={index} className="w-3/12 max-md:w-full max-md:ml-0">
+              <div key={index} className="w-6/12 max-md:w-full max-md:ml-0">
                 <PropertyCard {...property} />
               </div>
             ))}
