@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { TestimonialCard } from './TestimonialCard';
 
@@ -6,7 +7,7 @@ export const TestimonialsSection: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "Far far away, behind the word mountains, far\nfrom the countries Vokalia and Consonantia,\nthere live the blind texts.",
+      quote: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
       author: {
         name: "Roger Scott",
         title: "Marketing Manager",
@@ -15,7 +16,7 @@ export const TestimonialsSection: React.FC = () => {
       quoteIcon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d3bf9dbdb598d16d459eedf9b06a10dc9aeadc9c?placeholderIfAbsent=true"
     },
     {
-      quote: "Far far away, behind the word mountains, far\nfrom the countries Vokalia and Consonantia,\nthere live the blind texts.",
+      quote: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
       author: {
         name: "Roger Scott",
         title: "Marketing Manager",
@@ -24,7 +25,7 @@ export const TestimonialsSection: React.FC = () => {
       quoteIcon: "https://cdn.builder.io/api/v1/image/assets/TEMP/00ab2c970ed936a153cc3eef96991d2f86c7ede4?placeholderIfAbsent=true"
     },
     {
-      quote: "Far far away, behind the word mountains, far\nfrom the countries Vokalia and Consonantia,\nthere live the blind texts.",
+      quote: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
       author: {
         name: "Roger Scott",
         title: "Marketing Manager",
@@ -35,28 +36,40 @@ export const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section className="items-center z-0 flex w-full flex-col bg-[#F7F7F7] pt-[111px] pb-28 max-md:max-w-full max-md:py-[100px]">
-      <div className="max-w-[1320px] items-center flex w-[1320px] flex-col gap-6 px-3">
-        <header className="max-w-[1320px] items-center flex h-[99px] w-[770px] flex-col font-bold text-center gap-[5.39px] px-3">
-          <div className="text-[#5ea51d] text-[13px] font-bold leading-[23.4px]">
-            Testimonial
+    <section className="relative w-full bg-gradient-to-b from-gray-50 to-white py-16 md:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* Header Section */}
+        <div className="text-center mb-12 lg:mb-16">
+          <div className="inline-block">
+            <span className="inline-block px-4 py-2 bg-green-100 text-green-600 text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
+              Testimonial
+            </span>
           </div>
-          <h2 className="text-black text-[50px] font-bold leading-[70px] max-md:text-[40px]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
             Clients We Help
           </h2>
-        </header>
-        <div className="justify-center self-stretch flex w-full gap-[28.4px] overflow-hidden flex-wrap mt-6 pt-8 max-md:max-w-full">
+          <div className="w-24 h-1 bg-green-500 mx-auto mt-6"></div>
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} {...testimonial} />
+            <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <TestimonialCard {...testimonial} />
+            </div>
           ))}
         </div>
-        <div className="justify-center flex w-7 gap-2.5 mt-6 pt-[5px] pb-2.5">
-          {[0, 1].map((index) => (
+
+        {/* Pagination Dots */}
+        <div className="flex justify-center items-center space-x-3">
+          {[0, 1, 2].map((index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`flex w-[9px] shrink-0 h-[9px] rounded-[4.5px] ${
-                currentSlide === index ? 'bg-[#999]' : 'bg-[#DDD]'
+              className={`w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-110 ${
+                currentSlide === index 
+                  ? 'bg-green-500 shadow-lg' 
+                  : 'bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

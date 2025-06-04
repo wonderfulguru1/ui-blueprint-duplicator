@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface TestimonialCardProps {
@@ -16,32 +17,52 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   quoteIcon
 }) => {
   return (
-    <article className="rounded shadow-[0px_5px_12px_-9px_rgba(0,0,0,0.17)] flex min-w-60 flex-col overflow-hidden grow shrink w-[328px] bg-white pl-5 pr-[60px] pb-[30px] max-md:pr-5">
-      <div className="justify-center items-center flex min-h-[45px] bg-[#5EA51D] rounded-[22.5px]">
-        <img
-          src={quoteIcon}
-          className="aspect-[1.5] object-contain w-[15px] self-stretch my-auto"
-          alt="Quote"
-        />
+    <article className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full">
+      {/* Quote Icon Background */}
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-r from-green-500 to-green-600"></div>
+      
+      {/* Quote Icon */}
+      <div className="relative flex justify-center pt-6">
+        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <img
+            src={quoteIcon}
+            className="w-6 h-6 object-contain"
+            alt="Quote"
+          />
+        </div>
       </div>
-      <blockquote className="text-black text-base font-normal leading-[28.8px]">
-        {quote}
-      </blockquote>
-      <div className="flex items-stretch gap-4 font-semibold leading-[1.8] ml-2.5 mt-[33px]">
-        <img
-          src={author.avatar}
-          className="aspect-[1] object-contain w-20 shrink-0 rounded-[40px]"
-          alt={author.name}
-        />
-        <div className="flex flex-col items-stretch my-auto">
-          <div className="text-black text-[22px] font-semibold leading-[39.6px]">
-            {author.name}
+
+      {/* Card Content */}
+      <div className="px-6 pb-6 pt-4">
+        {/* Quote Text */}
+        <blockquote className="text-gray-700 text-base leading-relaxed mb-6 text-center">
+          "{quote}"
+        </blockquote>
+
+        {/* Author Section */}
+        <div className="flex items-center space-x-4 pt-4 border-t border-gray-100">
+          <div className="relative">
+            <img
+              src={author.avatar}
+              className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md group-hover:scale-105 transition-transform duration-300"
+              alt={author.name}
+            />
+            <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white"></div>
           </div>
-          <div className="text-[#5ea51d] text-[13px] font-semibold leading-[23.4px]">
-            {author.title}
+          
+          <div className="flex-1">
+            <h3 className="text-gray-900 text-lg font-semibold leading-tight">
+              {author.name}
+            </h3>
+            <p className="text-green-600 text-sm font-medium tracking-wide uppercase">
+              {author.title}
+            </p>
           </div>
         </div>
       </div>
+
+      {/* Hover Effect Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
     </article>
   );
 };
