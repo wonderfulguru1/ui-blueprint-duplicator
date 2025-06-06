@@ -6,29 +6,29 @@ export const TestimonialsSection: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      quote: "We were looking for a secure place to build our family home, and Genesia Properties delivered exactly what we needed. Their honesty, transparency, and support gave us peace of mind throughout the process. We’re excited to start building soon.",
       author: {
-        name: "Roger Scott",
-        title: "Marketing Manager",
-        avatar: "https://cdn.builder.io/api/v1/image/assets/TEMP/f38dee67468332e2757319cf2425d37afc391cc7?placeholderIfAbsent=true"
+        name: "Yomi Olaoye",
+        title: "Marketing Manager, The Paradise",
+        avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=200&auto=format&fit=crop"
       },
       quoteIcon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d3bf9dbdb598d16d459eedf9b06a10dc9aeadc9c?placeholderIfAbsent=true"
     },
     {
-      quote: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      quote: "Buying land seemed overwhelming at first, but Genesia Properties made it so easy. They explained everything clearly, from site inspection to payment and title registration. Today, I proudly own my first plot of land in a fast-developing area.",
       author: {
-        name: "Roger Scott",
-        title: "Marketing Manager",
-        avatar: "https://cdn.builder.io/api/v1/image/assets/TEMP/3f505b4cda1f9ad7e8b101b5db3b97c7733e3c1e?placeholderIfAbsent=true"
+        name: "Grace Tokunbo",
+        title: "CEO Juwsols LTD",
+        avatar: "https://images.unsplash.com/photo-1531123414780-f74242c2b052?q=80&w=200&auto=format&fit=crop"
       },
       quoteIcon: "https://cdn.builder.io/api/v1/image/assets/TEMP/00ab2c970ed936a153cc3eef96991d2f86c7ede4?placeholderIfAbsent=true"
     },
     {
-      quote: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      quote: "I was a bit nervous buying land from a new company, but Genesia Properties proved me wrong. Their team was honest, responsive, and made sure I understood every part of the process. I now own land in a promising location — and I’m so glad I took the step!.",
       author: {
-        name: "Roger Scott",
-        title: "Marketing Manager",
-        avatar: "https://cdn.builder.io/api/v1/image/assets/TEMP/2452ed056ab3928efd05f1a06cf194a7b80055a7?placeholderIfAbsent=true"
+        name: "Tope A., Ibadan",
+        title: "Operations Manager, SwiftComm Logistics",
+        avatar: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?q=80&w=200&auto=format&fit=crop"
       },
       quoteIcon: "https://cdn.builder.io/api/v1/image/assets/TEMP/cffd1a7b6a6fe2d6cec8cfc6903ad82b288e9260?placeholderIfAbsent=true"
     }
