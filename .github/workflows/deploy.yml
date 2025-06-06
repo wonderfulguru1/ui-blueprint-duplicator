@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Debug Build Folder
-        run: ls -la build
+        run: ls -la dist
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
@@ -35,4 +35,4 @@ jobs:
           aws-region: eu-north-1  # 👈 Stockholm region
 
       - name: Upload to S3
-        run: aws s3 sync build/ s3://www.genesiaproperties.com --delete
+        run: aws s3 sync dist/ s3://www.genesiaproperties.com --delete
