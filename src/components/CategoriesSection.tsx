@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Package, Award, Home, TrendingUp } from 'lucide-react';
 
@@ -7,11 +6,13 @@ export const CategoriesSection: React.FC = () => {
     <section className="py-16 lg:py-24" style={{ backgroundColor: '#e7e7e7' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="text-sm font-semibold text-gray-800 uppercase tracking-wider mb-4">
-            WHAT WE DO
+          <div className="inline-block">
+            <span className="inline-block px-4 py-2 bg-blue-100 text-[#06112a] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
+              WHAT WE DO
+            </span>
           </div>
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold" style={{ color: '#06112a' }}>
-            Why We stand Out!
+          <h2 className="text-[#06112a] text-3xl md:text-[50px] font-bold leading-tight md:leading-[70px]">
+            WHY CHOOSE US
           </h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto mt-6"></div>
         </div>

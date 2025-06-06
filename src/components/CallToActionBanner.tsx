@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const CallToActionBanner: React.FC = () => {
@@ -22,9 +21,14 @@ export const CallToActionBanner: React.FC = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-black hover:bg-gray-800 text-white font-semibold text-sm tracking-wider uppercase px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <a 
+              href="https://wa.me/2347038122917" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-[#B8912E] hover:bg-[#9A7A26] text-black font-bold text-sm tracking-wider uppercase px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
               Get in touch
-            </button>
+            </a>
             <button className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-semibold text-sm tracking-wider uppercase px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">
               Learn More
             </button>

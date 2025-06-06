@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface TestimonialCardProps {
@@ -19,7 +18,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   return (
     <article className="group relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full">
       {/* Quote Icon Background */}
-      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-r from-green-500 to-green-600"></div>
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-r "></div>
       
       {/* Quote Icon */}
       <div className="relative flex justify-center pt-6">
@@ -47,14 +46,14 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
               className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md group-hover:scale-105 transition-transform duration-300"
               alt={author.name}
             />
-            <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white"></div>
+            <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-[#d2a136] rounded-full border-2 border-white"></div>
           </div>
           
           <div className="flex-1">
             <h3 className="text-gray-900 text-lg font-semibold leading-tight">
               {author.name}
             </h3>
-            <p className="text-green-600 text-sm font-medium tracking-wide uppercase">
+            <p className="text-[#d2a136] text-sm font-medium tracking-wide uppercase">
               {author.title}
             </p>
           </div>
@@ -62,7 +61,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
 
       {/* Hover Effect Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-[#d2a136]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
     </article>
   );
 };

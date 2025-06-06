@@ -99,3 +99,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+.to-green-700 {
+  --tw-gradient-to: #0f1c3b var(--tw-gradient-to-position) !important;
+}
+
+
+.bg-\[\#07342C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(78 78 78) !important;
+}
+
+.bg-transparent {
+  background-color: #00000069 !important;
+}

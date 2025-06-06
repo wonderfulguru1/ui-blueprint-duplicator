@@ -29,92 +29,84 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
   showPrice = true
 }) => {
   return (
-    <article className="bg-[rgba(255,255,255,0.002)] shadow-[0px_10px_40px_-10px_rgba(0,0,0,0.25)] grow overflow-hidden font-semibold w-full rounded-2xl max-md:mt-6">
-      <div className="flex flex-col relative aspect-[1.224] w-full text-white">
+    <article className="bg-white shadow-lg rounded-2xl overflow-hidden">
+      <div className="relative aspect-[1.224] w-full">
         <img
           src={image}
-          className="absolute h-full w-full object-cover inset-0 rounded-t-2xl"
+          className="absolute h-full w-full object-cover"
           alt={title}
         />
         {showPrice && (
-          <div className="relative bg-black flex w-full gap-2 pl-[25px] pr-[61px] pt-[205px] pb-4 max-md:pt-[100px] max-md:px-5">
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
             {monthlyPrice ? (
-              <>
-                <div className="rounded bg-[#5EA51D] relative text-base whitespace-nowrap leading-[29px] pl-[7px] pr-1.5">
-                  <div className="z-0">{price}</div>
-                  <div className="bg-[rgba(255,255,255,0.20)] absolute z-0 flex min-h-px w-[75px] translate-x-[0%] -translate-y-2/4 h-px top-2/4 inset-x-0" />
+              <div className="flex gap-2">
+                <div className="rounded bg-[#5EA51D] relative text-base whitespace-nowrap leading-[29px] px-2">
+                  <div>{price}</div>
+                  <div className="bg-white/20 absolute h-px w-[75px] top-1/2 -translate-y-1/2" />
                 </div>
-                <div className="items-center rounded bg-[#5EA51D] flex px-[7px]">
-                  <div className="text-base leading-[29px] self-stretch my-auto">
-                    {monthlyPrice}
-                  </div>
-                  <div className="text-sm leading-[25px] self-stretch my-auto">
-                    {" "}/ mo
-                  </div>
+                <div className="rounded bg-[#5EA51D] flex items-center px-2">
+                  <div className="text-base leading-[29px]">{monthlyPrice}</div>
+                  <div className="text-sm leading-[25px] ml-1">/ mo</div>
                 </div>
-              </>
+              </div>
             ) : (
-              <div className="rounded bg-[#5EA51D] px-[7px] text-base whitespace-nowrap leading-[29px]">
+              <div className="rounded bg-[#5EA51D] px-2 text-base whitespace-nowrap leading-[29px]">
                 {price}
               </div>
             )}
           </div>
         )}
       </div>
-      <div className="flex w-full flex-col bg-white p-[25px] rounded-b-2xl max-md:px-5">
-        <div className="self-stretch flex w-full items-stretch gap-5 text-sm text-black justify-between">
-          <div className="flex items-stretch gap-2">
+      <div className="p-4 sm:p-6">
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-2">
             <img
               src={agent.avatar}
-              className="aspect-[1] object-contain w-[34px] shrink-0 rounded-[17px]"
+              className="w-8 h-8 rounded-full object-cover"
               alt={agent.name}
             />
-            <div className="text-sm font-semibold leading-[21px]">
+            <div className="text-sm font-semibold">
               {agent.name}
             </div>
           </div>
-          <div className="text-right text-sm font-semibold leading-[25.2px]">
+          <div className="text-sm font-semibold text-gray-600">
             {timeAgo}
           </div>
         </div>
-        <h3 className="text-black text-xl font-semibold leading-[30px]">
+        <h3 className="text-xl font-semibold mb-2">
           {title}
         </h3>
-        <div className="flex items-stretch gap-[18px] text-[13px] font-normal leading-[1.8] mt-1.5">
-          <div className="flex items-stretch text-[#999999] my-auto">
+        <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 mb-4">
+          <div className="flex items-center">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a5423fcdba093aa5464d91e894e4ad43b7b6360?placeholderIfAbsent=true"
-              className="aspect-[0.54] object-contain w-[7px] shrink-0"
+              className="w-2 h-4 mr-1"
               alt="Location"
             />
-            <div className="text-[13px] font-normal leading-[23.4px]">
-              {" "}{location}{" "}
-            </div>
+            <span>{location}</span>
           </div>
-          <div className="text-[13px] font-normal leading-[23.4px]">
+          <div className="text-sm">
             {type}
           </div>
         </div>
-        <div className="flex gap-[14.1px] text-base text-[#999999] font-normal leading-[1.8] mt-[21px]">
+        <div className="flex items-center gap-4 text-gray-600">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce26ea97dd726f7b768db24cccf1e25fb687e1ba?placeholderIfAbsent=true"
-            className="aspect-[1.07] object-contain w-[31px] shrink-0"
+            className="w-6 h-6"
             alt="Bedrooms"
           />
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/f7afb310892d5ac9b29f973fc4065b1126e9f1ff?placeholderIfAbsent=true"
-            className="aspect-[1.03] object-contain w-[30px] shrink-0"
+            className="w-6 h-6"
             alt="Bathrooms"
           />
-          <div className="flex items-stretch gap-[5px] w-[95px] py-1.5">
+          <div className="flex items-center gap-1">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ca05ab70baab166faa7d9f7aea48e106d6e2f44?placeholderIfAbsent=true"
-              className="aspect-[1] object-contain w-4 shrink-0"
+              className="w-4 h-4"
               alt="Area"
             />
-            <div className="text-base font-normal leading-[28.8px]">
-              {sqft}
-            </div>
+            <span>{sqft}</span>
           </div>
         </div>
       </div>

@@ -1,179 +1,95 @@
-
 import React from 'react';
-
-interface FooterLinkProps {
-  icon: string;
-  text: string;
-}
-
-const FooterLink: React.FC<FooterLinkProps> = ({ icon, text }) => (
-  <div className="items-center flex h-[22px] gap-2">
-    <img
-      src={icon}
-      className="aspect-[0.71] object-contain w-2.5 self-stretch shrink-0 my-auto"
-      alt=""
-    />
-    <div className="text-base font-normal leading-[28.8px]">
-      {text}
-    </div>
-  </div>
-);
+import logo from '@/assets/genesia-logo.png';
 
 export const Footer: React.FC = () => {
-  const offerLinks = [
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/ed1ffa32ae291d47439d7604fa1e823cfa826e29?placeholderIfAbsent=true', text: 'Properties' },
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/a01ee748018ba53f292b6c225acd824f68e35450?placeholderIfAbsent=true', text: 'Agents' },
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/8c456fa163c76f7d0bafe6edcc1c5c09f67d837f?placeholderIfAbsent=true', text: 'Locations' },
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/e2b6fb8a61e6ec8c454919b640ffef048a5c6d5c?placeholderIfAbsent=true', text: 'Clients Support' }
-  ];
-
-  const companyLinks = [
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/ed1ffa32ae291d47439d7604fa1e823cfa826e29?placeholderIfAbsent=true', text: 'Home' },
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/a01ee748018ba53f292b6c225acd824f68e35450?placeholderIfAbsent=true', text: 'About' },
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/8c456fa163c76f7d0bafe6edcc1c5c09f67d837f?placeholderIfAbsent=true', text: 'Blog' },
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/e2b6fb8a61e6ec8c454919b640ffef048a5c6d5c?placeholderIfAbsent=true', text: 'Contact Us' }
-  ];
-
-  const quickLinks = [
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/ed1ffa32ae291d47439d7604fa1e823cfa826e29?placeholderIfAbsent=true', text: 'Terms & Conditions' },
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/a01ee748018ba53f292b6c225acd824f68e35450?placeholderIfAbsent=true', text: 'User\'s Guide' },
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/8c456fa163c76f7d0bafe6edcc1c5c09f67d837f?placeholderIfAbsent=true', text: 'Support Center' },
-    { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/e2b6fb8a61e6ec8c454919b640ffef048a5c6d5c?placeholderIfAbsent=true', text: 'Press Info' }
-  ];
-
   return (
-    <footer className="z-0 flex w-full flex-col items-center bg-[#06112A] pt-16 md:pt-20 lg:pt-28 max-md:max-w-full">
-      {/* Main Footer Content */}
-      <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Footer Headers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 text-white mb-8">
-          {/* Brand Section */}
-          <div className="lg:col-span-1">
-            <div className="text-2xl md:text-[28px] font-black leading-tight mb-1">
-              Oakberry
-            </div>
-            <div className="text-[11px] font-bold leading-tight">
-              Real Estate Agency
-            </div>
-          </div>
-          
-          {/* Section Headers */}
-          <div className="text-xl font-bold leading-[30px]">
-            Offers
-          </div>
-          <div className="text-xl font-bold leading-[30px]">
-            Company
-          </div>
-          <div className="text-xl font-bold leading-[30px]">
-            Quick Links
-          </div>
-          <div className="text-xl font-bold leading-[30px]">
-            Have a Questions?
-          </div>
-        </div>
-
-        {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Brand Description */}
-          <div className="lg:col-span-1">
-            <p className="text-white text-base font-normal leading-[28.8px] mb-6">
-              A small river named Duden flows by their place and supplies it with the necessary regelialia.
+    <>
+      <footer className="bg-[#06112a] text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Logo & Description */}
+          <div>
+            <img src={logo} alt="Genesia Properties Logo" className="h-16 mb-4" />
+            <p className="mb-6 text-sm">
+              At Genesia Properties, we don't just sell land — we sell the foundation for your dream.
             </p>
-            <div className="flex gap-[14.1px]">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2379dfe5ffb0fa24144358d1379a0c64958d91b?placeholderIfAbsent=true"
-                className="aspect-[1] object-contain w-10 shrink-0 rounded-[20px]"
-                alt="Social media"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ae72363ce03894ff6d41d6b9d42b53e95ce5514?placeholderIfAbsent=true"
-                className="aspect-[1] object-contain w-10 shrink-0 rounded-[20px]"
-                alt="Social media"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1b7d04c1ab63877289d41603dc53916227478dd?placeholderIfAbsent=true"
-                className="aspect-[1] object-contain w-10 shrink-0 rounded-[20px]"
-                alt="Social media"
-              />
+            <div className="flex space-x-4">
+              <a href="#" aria-label="Facebook">
+                <svg className="w-7 h-7 text-[#D2A136] hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="Twitter">
+                <svg className="w-7 h-7 text-[#D2A136] hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg className="w-7 h-7 text-[#D2A136] hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                </svg>
+              </a>
             </div>
           </div>
 
-          {/* Offers Links */}
-          <div className="flex flex-col text-base text-white font-normal leading-[29px] space-y-4">
-            {offerLinks.map((link, index) => (
-              <FooterLink key={index} icon={link.icon} text={link.text} />
-            ))}
-          </div>
-
-          {/* Company Links */}
-          <div className="flex flex-col text-base text-white font-normal leading-[29px] space-y-4">
-            {companyLinks.map((link, index) => (
-              <FooterLink key={index} icon={link.icon} text={link.text} />
-            ))}
+          {/* Offers */}
+          <div>
+            <h3 className="font-bold mb-4">Offers</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="flex items-center hover:text-[#D2A136]"><span className="mr-2 text-[#D2A136]">&gt;</span>Kuje</a></li>
+              <li><a href="#" className="flex items-center hover:text-[#D2A136]"><span className="mr-2 text-[#D2A136]">&gt;</span>Dei-dei</a></li>
+            </ul>
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col text-base text-white font-normal leading-[29px] space-y-4">
-            {quickLinks.map((link, index) => (
-              <FooterLink key={index} icon={link.icon} text={link.text} />
-            ))}
+          <div>
+            <h3 className="font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="flex items-center hover:text-[#D2A136]"><span className="mr-2 text-[#D2A136]">&gt;</span>Home</a></li>
+              <li><a href="#" className="flex items-center hover:text-[#D2A136]"><span className="mr-2 text-[#D2A136]">&gt;</span>About</a></li>
+              <li><a href="#" className="flex items-center hover:text-[#D2A136]"><span className="mr-2 text-[#D2A136]">&gt;</span>Become a realtor</a></li>
+              <li><a href="#" className="flex items-center hover:text-[#D2A136]"><span className="mr-2 text-[#D2A136]">&gt;</span>Contact Us</a></li>
+            </ul>
           </div>
 
-          {/* Contact Information */}
-          <div className="flex flex-col text-white space-y-4">
-            {/* Address */}
-            <div className="flex items-start gap-4">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/3dc21d9cd1ee38c127e1bd70f536e56014be6a73?placeholderIfAbsent=true"
-                className="aspect-[1] object-contain w-[15px] shrink-0 mt-1"
-                alt="Address"
-              />
-              <div className="text-[15px] font-normal leading-[22.5px]">
-                203 Fake St. Mountain View, San Francisco, California, USA
-              </div>
-            </div>
-            
-            {/* Phone */}
-            <div className="flex items-start gap-4">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2b57c9e244232c2b1a2ba1d685e3a50f5d4ea4c?placeholderIfAbsent=true"
-                className="aspect-[0.8] object-contain w-3 shrink-0 mt-1"
-                alt="Phone"
-              />
-              <div className="text-sm font-normal leading-[21px]">
-                +2 392 3929 210
-              </div>
-            </div>
-            
-            {/* Email */}
-            <div className="flex items-start gap-4">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac5437829697af71a40327f5aa5b28e5d8a0c370?placeholderIfAbsent=true"
-                className="aspect-[1] object-contain w-[15px] shrink-0 mt-1"
-                alt="Email"
-              />
-              <div className="text-sm font-normal leading-[21px]">
-                info@yourdomain.com
-              </div>
-            </div>
+          {/* Contact */}
+          <div>
+            <h3 className="font-bold mb-4">Have a Question?</h3>
+            <ul className="space-y-4 text-sm">
+              <li className="flex items-center">
+                <svg className="w-5 h-5 mr-2 text-[#D2A136]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Bricks n more plaza 5th Avenue Gwarimpa
+              </li>
+              <li className="flex items-center">
+                <svg className="w-5 h-5 mr-2 text-[#D2A136]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <a href="tel:+2348065046516" className="hover:text-[#D2A136]">+2348065046516</a>
+              </li>
+              <li className="flex items-center">
+                <svg className="w-5 h-5 mr-2 text-[#D2A136]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <a href="mailto:info@genesiaproperties.com" className="hover:text-[#D2A136]">info@genesiaproperties.com</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      {/* Copyright Section */}
-      <div className="w-full bg-[#050D21] mt-16 lg:mt-[120px] py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-center text-center text-white text-[13px] font-normal leading-[23.4px] space-y-2 sm:space-y-0 sm:space-x-1">
-            <span>Copyright ©2025 All rights reserved | This template is made with</span>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/709dd008b45a6ca58edd5b1a2ff15115d4105f3e?placeholderIfAbsent=true"
-              className="aspect-[1] object-contain w-[13px] mx-1"
-              alt="Heart"
-            />
-            <span>by Colorlib</span>
-          </div>
+      </footer>
+      <div className="w-full bg-[#050D21]  py-6">
+        <div className="max-w-7xl mx-auto px-4 text-center text-white text-sm flex flex-col items-center justify-center gap-2">
+          <span>
+            Copyright ©2025 All rights reserved | www.genesiaproperties.com
+            <span className="inline-block mx-2 align-middle">
+              <svg width="16" height="16" viewBox="0 0 13 13" fill="none">
+                <path d="M6.5 12.5L5.5 11.5C2.5 8.5 0.5 6.5 0.5 4C0.5 2 2 0.5 4 0.5C5 0.5 6 1 6.5 1.5C7 1 8 0.5 9 0.5C11 0.5 12.5 2 12.5 4C12.5 6.5 10.5 8.5 7.5 11.5L6.5 12.5Z" fill="#D2A136"/>
+              </svg>
+            </span>
+            by Genesia inc
+          </span>
         </div>
       </div>
-    </footer>
+    </>
   );
 };

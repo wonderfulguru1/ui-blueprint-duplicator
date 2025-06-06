@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { TestimonialCard } from './TestimonialCard';
 
@@ -36,19 +35,19 @@ export const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-slate-900 py-16 md:py-20 lg:py-24">
+    <section className="relative w-full py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Header Section */}
         <div className="text-center mb-12 lg:mb-16">
           <div className="inline-block">
-            <span className="inline-block px-4 py-2 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
+            <span className="inline-block px-4 py-2 bg-blue-100 text-[#06112a] text-sm font-semibold rounded-full mb-4 tracking-wide uppercase">
               Testimonial
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#06112a] leading-tight">
             Happy Customers
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
             Genuine Experiences from Happy Clients and Trusted Partners
           </p>
           <div className="w-24 h-1 bg-yellow-500 mx-auto mt-6"></div>
@@ -63,21 +62,7 @@ export const TestimonialsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Pagination Dots */}
-        <div className="flex justify-center items-center space-x-3">
-          {[0, 1, 2].map((index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-110 ${
-                currentSlide === index 
-                  ? 'bg-blue-500 shadow-lg' 
-                  : 'bg-gray-500 hover:bg-gray-400'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+     
       </div>
     </section>
   );
