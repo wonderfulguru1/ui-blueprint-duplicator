@@ -9,7 +9,7 @@ export const FeaturedProperties: React.FC = () => {
       title: "Anna's Court Dei-Dei",
       location: 'By Sefacc Hotel and Suites Deidei',
       type: 'Sale' as const,
-      agent: { name: 'Genesia Properties', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
+      agent: { name: 'Genesia Properties', avatar: 'https://images.unsplash.com/photo-1507680434567-5739c80be1ac?q=80&w=200&auto=format&fit=crop' },
       timeAgo: '2 weeks ago',
       sqft: '250sqm',
       showPrice: false
@@ -20,7 +20,7 @@ export const FeaturedProperties: React.FC = () => {
       title: "Anna's Court Kuje",
       location: 'Kuje Bridge after Military Checkpoint, Kuje, Abuja',
       type: 'Sale' as const,
-      agent: { name: 'Genesia Properties', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/7465ef98c2c2a1dd5948c27e9afa8fc540c97b81?placeholderIfAbsent=true' },
+      agent: { name: 'Genesia Properties', avatar: 'https://images.unsplash.com/photo-1507680434567-5739c80be1ac?q=80&w=200&auto=format&fit=crop' },
       timeAgo: '2 weeks ago',
       sqft: '250sqm',
       showPrice: false
