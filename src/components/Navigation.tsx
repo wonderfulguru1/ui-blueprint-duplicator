@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '@/assets/genesia-logo.png';
 
@@ -8,11 +8,26 @@ interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ whiteBg }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
+  useEffect(() => {
+    if (!isHomePage) return;
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHomePage]);
+
+  const navBg = isHomePage && !scrolled ? 'bg-transparent' : 'bg-white shadow-md';
+  const navText = isHomePage && !scrolled ? 'text-white' : 'text-[#06112a]';
+  const navBtn = isHomePage && !scrolled ? 'text-white' : 'text-[#06112a]';
+  const btnBg = isHomePage && !scrolled ? 'text-white' : 'text-[#06112a]';
+
   return (
-    <nav className={`${isHomePage ? 'bg-transparent' : 'bg-white shadow-md'} absolute top-0 left-0 right-0 z-[9999]`}>
+    <nav className={`${navBg} fixed top-0 left-0 right-0 z-[9999] transition-colors duration-300 md:mt-4`}>
       <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex flex-col items-start gap-1 select-none" style={{ minWidth: 80 }}>
@@ -51,7 +66,7 @@ export const Navigation: React.FC<NavigationProps> = ({ whiteBg }) => {
               height="24" 
               viewBox="0 0 24 24" 
               fill="none" 
-              className={isHomePage ? 'text-white' : 'text-[#06112a]'}
+              className={navBtn}
             >
               {isMenuOpen ? (
                 <path 
@@ -76,17 +91,17 @@ export const Navigation: React.FC<NavigationProps> = ({ whiteBg }) => {
 
         {/* Navigation Links - Desktop */}
         <div className="hidden md:flex items-center space-x-12">
-          <Link to="/" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${isHomePage ? 'text-white' : 'text-[#06112a]'}`}>Home</Link>
-          <Link to="/about-us" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${isHomePage ? 'text-white' : 'text-[#06112a]'}`}>About</Link>
-          <Link to="/products" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${isHomePage ? 'text-white' : 'text-[#06112a]'}`}>Products</Link>
-          <Link to="/realtor" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${isHomePage ? 'text-white' : 'text-[#06112a]'}`}>Become an agent</Link>
-          <Link to="/contact" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${isHomePage ? 'text-white' : 'text-[#06112a]'}`}>Contact</Link>
+          <Link to="/" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${navText}`}>Home</Link>
+          <Link to="/about-us" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${navText}`}>About</Link>
+          <Link to="/products" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${navText}`}>Products</Link>
+          <Link to="/realtor" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${navText}`}>Become an agent</Link>
+          <Link to="/contact" className={`text-sm font-bold uppercase tracking-wider hover:text-[#D2A136] transition-colors ${navText}`}>Contact</Link>
         </div>
         
         {/* Submit Property Button - Desktop */}
         <Link 
           to="/appointment" 
-          className={`hidden md:block bg-[#D2A136] ${isHomePage ? 'text-white' : 'text-[#06112a]'} rounded-lg text-sm font-semibold uppercase tracking-wider px-6 py-3 hover:bg-[#B8912E] transition-colors`}
+          className={`hidden md:block bg-[#D2A136] ${navText} rounded-lg text-sm font-semibold uppercase tracking-wider px-6 py-3 hover:bg-[#B8912E] transition-colors`}
         >
           Book an Appointment
         </Link>

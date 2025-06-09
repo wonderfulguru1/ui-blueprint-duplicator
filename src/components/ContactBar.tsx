@@ -2,7 +2,7 @@ import React from 'react';
 
 export const ContactBar: React.FC = () => {
   return (
-    <div className="hidden md:block bg-[#06112a] text-white py-2">
+    <div className="hidden md:block bg-[#06112a] text-white py-2 fixed top-0 left-0 right-0 w-full z-[10000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-6">
