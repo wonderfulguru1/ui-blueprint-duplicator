@@ -11,10 +11,13 @@ const Contact: React.FC = () => {
         email: '',
         subject: '',
         message: '',
+        receivePropertyEmails: false,
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+        const { name, type } = e.target;
+        const value = type === 'checkbox' ? (e.target as HTMLInputElement).checked : e.target.value;
+        setForm({ ...form, [name]: value });
     };
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -125,6 +128,16 @@ const Contact: React.FC = () => {
                                 className="w-full border border-[#2bb686] rounded px-4 py-3 mb-6 focus:outline-none focus:ring-2 focus:ring-[#2bb686] bg-transparent resize-none"
                                 required
                             />
+                            <label className="flex items-center gap-2 text-sm text-gray-700 mb-6">
+                                <input
+                                    type="checkbox"
+                                    name="receivePropertyEmails"
+                                    checked={form.receivePropertyEmails}
+                                    onChange={handleChange}
+                                    className="h-4 w-4 accent-[#07342C]"
+                                />
+                                Would you like to receive emails for new properties?
+                            </label>
                             <button
                                 type="submit"
                                 className="w-full bg-[#07342C] text-white font-bold py-4 rounded text-lg shadow-md hover:bg-[#05281f] transition-colors"
