@@ -6,6 +6,8 @@ import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import Realtor from "./pages/Realtor";
+import Admin from "./pages/Admin";
+import ProductDetail from "./pages/ProductDetail";
 
 export const routes: RouteObject[] = [
   {
@@ -31,6 +33,14 @@ export const routes: RouteObject[] = [
   {
     path: "/realtor",
     element: <Realtor />,
+  },
+  {
+    path: "/products/:id",
+    element: <ProductDetail />,
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
   },
   {
     path: "*",
