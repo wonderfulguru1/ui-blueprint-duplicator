@@ -36,3 +36,20 @@ jobs:
 
       - name: Upload to S3
         run: aws s3 sync dist/ s3://www.genesiaproperties.com --delete
+
+      - name: Keep the entry page fresh
+        run: >-
+          aws s3 cp dist/index.html s3://www.genesiaproperties.com/index.html
+          --content-type text/html
+          --cache-control 'no-cache, no-store, must-revalidate'
+
+      - name: Refresh CloudFront homepage
+        shell: bash
+        run: |
+          distribution_id=$(aws cloudfront list-distributions --query "DistributionList.Items[?Aliases.Items && contains(Aliases.Items, 'www.genesiaproperties.com')].Id | [0]" --output text)
+          if [ -z "$distribution_id" ] || [ "$distribution_id" = "None" ]; then
+            echo 'No CloudFront distribution found for www.genesiaproperties.com.' >&2
+            exit 1
+          fi
+          invalidation_id=$(aws cloudfront create-invalidation --distribution-id "$distribution_id" --paths '/' '/index.html' --query 'Invalidation.Id' --output text)
+          aws cloudfront wait invalidation-completed --distribution-id "$distribution_id" --id "$invalidation_id"
