@@ -1,27 +1,29 @@
-import React, { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useProducts } from '@/hooks/useProducts';
-import { ProductList } from '@/components/admin/ProductList';
-import { ProductForm } from '@/components/admin/ProductForm';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { LayoutDashboard, LogOut, Plus, Package } from 'lucide-react';
-import genesiaLogo from '@/assets/genesia-logo.png';
+import React, { useState } from "react";
+import { NowSellingManager } from "@/components/NowSelling";
+import { useAuth } from "@/hooks/useAuth";
+import { useProducts } from "@/hooks/useProducts";
+import { ProductList } from "@/components/admin/ProductList";
+import { ProductForm } from "@/components/admin/ProductForm";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { LayoutDashboard, LogOut, Plus, Package } from "lucide-react";
+import genesiaLogo from "@/assets/genesia-logo.png";
 
 const Admin: React.FC = () => {
   const { user, loading, signIn, signOut } = useAuth();
   const { data: products, isLoading: productsLoading } = useProducts();
 
   const [showAddForm, setShowAddForm] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [authError, setAuthError] = useState('');
+  const [section, setSection] = useState<"products" | "promotions">("products");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [authError, setAuthError] = useState("");
   const [authLoading, setAuthLoading] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    setAuthError('');
+    setAuthError("");
     setAuthLoading(true);
     const { error } = await signIn(email, password);
     setAuthLoading(false);
@@ -42,10 +44,18 @@ const Admin: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-[#06112a] to-[#0d2147] flex items-center justify-center px-4">
         <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm">
           <div className="flex justify-center mb-6">
-            <img src={genesiaLogo} alt="Genesia Properties" className="h-14 object-contain" />
+            <img
+              src={genesiaLogo}
+              alt="Genesia Properties"
+              className="h-14 object-contain"
+            />
           </div>
-          <h1 className="text-xl font-bold text-[#06112a] text-center mb-1">Admin Portal</h1>
-          <p className="text-sm text-gray-400 text-center mb-6">Sign in to manage your listings</p>
+          <h1 className="text-xl font-bold text-[#06112a] text-center mb-1">
+            Admin Portal
+          </h1>
+          <p className="text-sm text-gray-400 text-center mb-6">
+            Sign in to manage your listings
+          </p>
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
@@ -74,7 +84,9 @@ const Admin: React.FC = () => {
             </div>
 
             {authError && (
-              <p className="text-red-500 text-sm bg-red-50 rounded-lg px-3 py-2">{authError}</p>
+              <p className="text-red-500 text-sm bg-red-50 rounded-lg px-3 py-2">
+                {authError}
+              </p>
             )}
 
             <Button
@@ -82,7 +94,7 @@ const Admin: React.FC = () => {
               disabled={authLoading}
               className="w-full bg-[#06112a] hover:bg-[#0d2147] text-white h-11"
             >
-              {authLoading ? 'Signing in…' : 'Sign In'}
+              {authLoading ? "Signing in…" : "Sign In"}
             </Button>
           </form>
         </div>
@@ -108,7 +120,9 @@ const Admin: React.FC = () => {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-sm text-white/60 hidden sm:block">{user.email}</span>
+          <span className="text-sm text-white/60 hidden sm:block">
+            {user.email}
+          </span>
           <Button
             size="sm"
             variant="outline"
@@ -123,62 +137,90 @@ const Admin: React.FC = () => {
 
       {/* Main */}
       <main className="max-w-4xl mx-auto px-4 py-10">
-        {/* Stats bar */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-              <Package className="w-5 h-5 text-[#06112a]" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-[#06112a]">{products?.length ?? '–'}</p>
-              <p className="text-xs text-gray-400">Total Listings</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
-              <Package className="w-5 h-5 text-green-600" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-[#06112a]">
-                {products?.filter((p) => p.type === 'Sale').length ?? '–'}
-              </p>
-              <p className="text-xs text-gray-400">For Sale</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center">
-              <Package className="w-5 h-5 text-[#D2A136]" />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-[#06112a]">
-                {products?.filter((p) => p.type === 'Rent').length ?? '–'}
-              </p>
-              <p className="text-xs text-gray-400">For Rent</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Product list header */}
-        <div className="flex items-center justify-between mb-5">
-          <div>
-            <h2 className="text-xl font-bold text-[#06112a]">All Products</h2>
-            <p className="text-sm text-gray-400 mt-0.5">
-              Manage your property listings
-            </p>
-          </div>
-          <Button
-            className="bg-[#D2A136] hover:bg-[#b88b28] text-white gap-2"
-            onClick={() => setShowAddForm(true)}
+        <nav aria-label="Admin sections" className="selling-admin-tabs">
+          <button
+            type="button"
+            aria-pressed={section === "products"}
+            onClick={() => setSection("products")}
           >
-            <Plus className="w-4 h-4" />
-            Add Product
-          </Button>
-        </div>
+            Property listings
+          </button>
+          <button
+            type="button"
+            aria-pressed={section === "promotions"}
+            onClick={() => setSection("promotions")}
+          >
+            Now Selling popup
+          </button>
+        </nav>
+        {section === "promotions" ? (
+          <NowSellingManager />
+        ) : (
+          <>
+            {/* Stats bar */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                  <Package className="w-5 h-5 text-[#06112a]" />
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-[#06112a]">
+                    {products?.length ?? "–"}
+                  </p>
+                  <p className="text-xs text-gray-400">Total Listings</p>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                  <Package className="w-5 h-5 text-green-600" />
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-[#06112a]">
+                    {products?.filter((p) => p.type === "Sale").length ?? "–"}
+                  </p>
+                  <p className="text-xs text-gray-400">For Sale</p>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center">
+                  <Package className="w-5 h-5 text-[#D2A136]" />
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-[#06112a]">
+                    {products?.filter((p) => p.type === "Rent").length ?? "–"}
+                  </p>
+                  <p className="text-xs text-gray-400">For Rent</p>
+                </div>
+              </div>
+            </div>
 
-        {productsLoading && (
-          <p className="text-center text-gray-400 py-16">Loading products…</p>
+            {/* Product list header */}
+            <div className="flex items-center justify-between mb-5">
+              <div>
+                <h2 className="text-xl font-bold text-[#06112a]">
+                  All Products
+                </h2>
+                <p className="text-sm text-gray-400 mt-0.5">
+                  Manage your property listings
+                </p>
+              </div>
+              <Button
+                className="bg-[#D2A136] hover:bg-[#b88b28] text-white gap-2"
+                onClick={() => setShowAddForm(true)}
+              >
+                <Plus className="w-4 h-4" />
+                Add Product
+              </Button>
+            </div>
+
+            {productsLoading && (
+              <p className="text-center text-gray-400 py-16">
+                Loading products…
+              </p>
+            )}
+            {products && <ProductList products={products} />}
+          </>
         )}
-        {products && <ProductList products={products} />}
       </main>
 
       {showAddForm && (

@@ -1,4 +1,5 @@
 import React from "react";
+import { NowSellingModal } from "@/components/NowSelling";
 import { ContactBar } from "@/components/ContactBar";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
@@ -14,6 +15,7 @@ import { Footer } from "@/components/Footer";
 const Index: React.FC = () => {
   return (
     <div className="g-home flex flex-col min-h-screen">
+      <NowSellingModal />
       <div className="relative">
         <HeroSection />
         <Navigation />
